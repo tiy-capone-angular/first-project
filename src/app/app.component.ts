@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  buttonText;
+
+  constructor() {
+    this.buttonText = 'Button App!';
+    setTimeout(() => {
+      this.buttonText = 'HOORAY!';
+    }, 1000);
+  }
+
+  handleSomeCoolThing() {
+    this.buttonText = 'Clicked';
+  }
 }
